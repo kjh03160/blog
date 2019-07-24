@@ -1,9 +1,12 @@
+{% load staticfiles %}
+
+
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>주노의 블로그</title>
+    <title>블로그</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     
@@ -655,6 +658,691 @@ body {
   height:100px;
   font-size:20px;
 }
+
+.cover {
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: 40%;
+            left: 50%;
+        }
+
+        .cover:after {
+            position: absolute;
+            background: #000;
+            top: 22px;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            z-index: -1;
+            content: "";
+        }
+
+        .head {
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: 0;
+            left: 0;
+            -webkit-animation: moveIt 3s cubic-bezier(0.7, 0.02, 0.1, 1) infinite;
+            animation: moveIt 3s cubic-bezier(0.7, 0.02, 0.1, 1) infinite;
+        }
+
+        .head:after {
+            position: absolute;
+            background: #fff;
+            top: 15px;
+            left: -8px;
+            width: 35px;
+            height: 30px;
+            content: "";
+        }
+
+        .headphones {
+            position: absolute;
+            top: -126px;
+            left: -120px;
+            width: 254px;
+            height: 140px;
+            overflow: hidden;
+        }
+
+        .headphones:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 240px;
+            height: 400px;
+            border-radius: 50%;
+            border-top: solid 7px currentColor;
+            border-bottom: solid 7px transparent;
+            border-left: solid 7px transparent;
+            border-right: solid 7px transparent;
+            content: "";
+        }
+
+        .headp,
+        .headp:before,
+        .headp:after {
+            background: #fff;
+            border: 7px solid #000;
+            position: absolute;
+            top: 45px;
+            width: 20px;
+            height: 80px;
+            border-radius: 34px/100px;
+        }
+
+        .headp.left,
+        .headp.left:before,
+        .headp.left:after {
+            left: 22px;
+        }
+
+        .headp.right,
+        .headp.right:before,
+        .headp.right:after {
+            right: 22px;
+        }
+
+        .headp i {
+            border: 7px solid #000;
+            position: absolute;
+            top: 15px;
+            width: 22px;
+            height: 40px;
+            border-radius: 50px/100px;
+            z-index: -1;
+        }
+
+        .headp:before,
+        .headp:after {
+            background: #fff;
+            top: -7px;
+            content: "";
+        }
+
+        .headp.left:before {
+            border-left-color: #cd96a8;
+            left: 4px;
+        }
+
+        .headp.left:after {
+            left: 15px;
+        }
+
+        .headp.right:before {
+            border-right-color: #cd96a8;
+            right: 4px;
+        }
+
+        .headp.right:after {
+            right: 15px;
+        }
+
+        .headp.left i {
+            right: 1px;
+        }
+
+        .headp.right i {
+            left: 1px;
+        }
+
+        .petals {
+            background: #000;
+            width: 114px;
+            height: 114px;
+            position: relative;
+            top: -57px;
+            left: -50px;
+            border-radius: 18px;
+            margin-top: -30px;
+            -webkit-transform: rotate(13deg);
+            transform: rotate(13deg);
+        }
+
+        .petals:before,
+        .petals:after {
+            background: #000;
+            height: 114px;
+            width: 114px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 18px;
+            content: "";
+        }
+
+        .petals:before {
+            -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+        }
+
+        .petals:after {
+            -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+        }
+
+        .petals .inside {
+            background: white;
+            position: absolute;
+            border-radius: 10px;
+            height: 100px;
+            width: 100px;
+            margin: 7px;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+
+        .petals .inside:before,
+        .petals .inside:after {
+            background: white;
+            border-radius: 10px;
+            height: 100px;
+            width: 100px;
+        }
+
+        .face {
+            background: #ffdca3;
+            position: absolute;
+            top: -54px;
+            left: -47px;
+            display: inline-block;
+            padding: 54px;
+            border-radius: 50%;
+            z-index: 1;
+            margin-top: -30px;
+        }
+
+        .face:before,
+        .face:after {
+            border: 4px solid #000;
+            position: absolute;
+            top: 38px;
+            width: 20px;
+            height: 0;
+            border-radius: 50px;
+            content: "";
+        }
+
+        .face:before {
+            left: 20px;
+            -webkit-transform: rotate(-24deg);
+            transform: rotate(-24deg);
+        }
+
+        .face:after {
+            right: 20px;
+            -webkit-transform: rotate(24deg);
+            transform: rotate(24deg);
+        }
+
+        .face i {
+            position: absolute;
+            left: 22px;
+            bottom: 22px;
+            width: 50px;
+            height: 80px;
+            border-radius: 50%;
+            border-top: solid 7px transparent;
+            border-bottom: solid 7px currentColor;
+            border-left: solid 7px transparent;
+            border-right: solid 7px transparent;
+        }
+
+        .line {
+            overflow: hidden;
+            width: 50px;
+            height: 90px;
+            position: absolute;
+            top: 32px;
+            left: -19px;
+        }
+
+        .tail {
+            position: absolute;
+            bottom: 0;
+            background-color: #000;
+            height: 7px;
+            width: 7px;
+            border-radius: 0 0 20px 20px;
+            z-index: 1;
+            -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+            -webkit-animation: tail 3s linear infinite;
+            animation: tail 3s linear infinite;
+            -webkit-transform-origin: center center;
+            transform-origin: center center;
+        }
+
+        .tail .tail {
+            bottom: 5px;
+        }
+
+        .tail.first {
+            bottom: -20px;
+            left: 25px;
+        }
+
+        .last {
+            border-radius: 20px;
+        }
+
+        .tail .tail .tail .tail .tail .tail .tail {
+            -webkit-animation: tail-next 3s ease-out infinite;
+            animation: tail-next 3s ease-out infinite;
+        }
+
+        .shadow {
+            background: #d4d2d4;
+            position: absolute;
+            top: 220px;
+            left: -120px;
+            width: 256px;
+            height: 40px;
+            border-radius: 100%;
+            z-index: -1;
+        }
+
+        .shadow:after {
+            background: #d4d2d4;
+            position: absolute;
+            top: -40px;
+            left: -80px;
+            width: 160px;
+            height: 25px;
+            border-radius: 100%;
+            content: "";
+        }
+
+        .pot-top i {
+            position: absolute;
+            bottom: -7px;
+            height: 7px;
+        }
+
+        .pot-top i:first-child {
+            right: 40px;
+            width: 50px;
+            background: #fff;
+        }
+
+        .pot-top i:first-child:after,
+        .pot-top i:first-child:before {
+            background: #000;
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            content: "";
+        }
+
+        .pot-top i:first-child:before {
+            left: -2px;
+        }
+
+        .pot-top i:first-child:after {
+            right: -2px;
+        }
+
+        .pot-top i:last-child {
+            right: 50px;
+            width: 30px;
+            border-radius: 50px;
+            background: #000;
+        }
+
+        .point {
+            position: absolute;
+            top: 26px;
+            z-index: 1;
+        }
+
+        .point:after,
+        .point:before {
+            background: #000;
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            content: "";
+        }
+
+        .point:before {
+            left: -11px;
+            top: 1px;
+        }
+
+        .point:after {
+            right: -30px;
+        }
+
+        .petal {
+            position: absolute;
+            width: 200px;
+            height: 90px;
+            left: -95px;
+            top: 50px;
+            -webkit-animation: moveIt 3s cubic-bezier(0.7, 0.02, 0.1, 1) infinite;
+            animation: moveIt 3s cubic-bezier(0.7, 0.02, 0.1, 1) infinite;
+        }
+
+        .petal1 {
+            position: absolute;
+            left: 14px;
+            top: 0;
+            border: 6px solid #000;
+            width: 60px;
+            height: 40px;
+            border-radius: 80% 0;
+            -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+        }
+
+        .petal1:before {
+            display: block;
+            margin: 0 0 0 5px;
+            width: 55px;
+            height: 35px;
+            background: #3b9177;
+            border-radius: 90% 0;
+            content: "";
+        }
+
+        .petal2 {
+            position: absolute;
+            left: 114px;
+            top: -10px;
+            border: 6px solid #000;
+            width: 60px;
+            height: 40px;
+            border-radius: 80% 0;
+        }
+
+        .petal2:before {
+            display: block;
+            margin: 5px 0 0 0;
+            width: 55px;
+            height: 35px;
+            background: #9fd1b7;
+            border-radius: 80% 0;
+            content: "";
+        }
+
+        .pot {
+            -webkit-perspective: 200px;
+            perspective: 200px;
+            position: absolute;
+            top: 162px;
+            left: -55px;
+            -webkit-animation: moveItPot 3s cubic-bezier(0.7, 0.02, 0.1, 1) infinite;
+            animation: moveItPot 3s cubic-bezier(0.7, 0.02, 0.1, 1) infinite;
+        }
+
+        .pot:before {
+            border: 7px solid #000;
+            border-top: 0;
+            -webkit-transform: rotateX(-30deg);
+            transform: rotateX(-30deg);
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+            border-radius: 0 0 30% 30%;
+            height: 80px;
+            width: 110px;
+            display: inline-block;
+            background: #fff;
+            content: "";
+        }
+
+        .pot:after {
+            position: absolute;
+            top: 3px;
+            left: 12px;
+            background: #5a7381;
+            -webkit-transform: rotateX(-30deg);
+            transform: rotateX(-30deg);
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+            border-radius: 10% 10% 40% 20%;
+            height: 70px;
+            width: 100px;
+            display: inline-block;
+            content: "";
+        }
+
+        .pot .pot-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .pot .pot-line:after,
+        .pot .pot-line:before {
+            position: absolute;
+            top: 35px;
+            left: 15px;
+            z-index: 1;
+            background: #000;
+            width: 34px;
+            height: 8px;
+            border-radius: 5px;
+            content: "";
+        }
+
+        .pot .pot-line:before {
+            top: 50px;
+            left: 25px;
+        }
+
+        .pot-top {
+            background: #fff;
+            position: absolute;
+            top: -40px;
+            left: -35px;
+            width: 180px;
+            height: 25px;
+            border: 7px solid #000;
+            border-radius: 30px;
+        }
+
+        .pot-top:after {
+            position: absolute;
+            top: 2px;
+            left: 7px;
+            background: #82aca2;
+            -webkit-transform: rotate(0.7deg);
+            transform: rotate(0.7deg);
+            border-radius: 50px;
+            height: 19px;
+            width: 165px;
+            display: inline-block;
+            content: "";
+        }
+
+        .pot-top:after i {
+            position: relation;
+        }
+
+        @-webkit-keyframes moveIt {
+
+            0%,
+            100% {
+                -webkit-transform: rotate(-15deg);
+                transform: rotate(-15deg);
+            }
+
+            50% {
+                -webkit-transform: rotate(15deg);
+                transform: rotate(15deg);
+            }
+        }
+
+        @keyframes moveIt {
+
+            0%,
+            100% {
+                -webkit-transform: rotate(-15deg);
+                transform: rotate(-15deg);
+            }
+
+            50% {
+                -webkit-transform: rotate(15deg);
+                transform: rotate(15deg);
+            }
+        }
+
+        @-webkit-keyframes moveItPot {
+
+            0%,
+            100% {
+                -webkit-transform: rotate(5deg);
+                transform: rotate(5deg);
+            }
+
+            50% {
+                -webkit-transform: rotate(-5deg);
+                transform: rotate(-5deg);
+            }
+        }
+
+        @keyframes moveItPot {
+
+            0%,
+            100% {
+                -webkit-transform: rotate(5deg);
+                transform: rotate(5deg);
+            }
+
+            50% {
+                -webkit-transform: rotate(-5deg);
+                transform: rotate(-5deg);
+            }
+        }
+
+        @-webkit-keyframes tail {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            25% {
+                -webkit-transform: rotate(3deg);
+                transform: rotate(3deg);
+            }
+
+            40% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            75% {
+                -webkit-transform: rotate(-3deg);
+                transform: rotate(-3deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes tail {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            25% {
+                -webkit-transform: rotate(3deg);
+                transform: rotate(3deg);
+            }
+
+            40% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            75% {
+                -webkit-transform: rotate(-3deg);
+                transform: rotate(-3deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+        }
+
+        @-webkit-keyframes tail-next {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            25% {
+                -webkit-transform: rotate(-3deg);
+                transform: rotate(-3deg);
+            }
+
+            40% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            75% {
+                -webkit-transform: rotate(3deg);
+                transform: rotate(3deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes tail-next {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            25% {
+                -webkit-transform: rotate(-3deg);
+                transform: rotate(-3deg);
+            }
+
+            40% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            75% {
+                -webkit-transform: rotate(3deg);
+                transform: rotate(3deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+        }
+
+        .attop {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+        }
+
+        .atright {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+        }
     
     
     
@@ -664,7 +1352,7 @@ body {
 </head>
 <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="{% url 'home' %}">주노의 블로그</a>
+                <a class="navbar-brand" href="{% url 'home' %}">BLOG</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -675,19 +1363,163 @@ body {
                       <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">글쓰기</a>
+                      <a class="nav-link" href="{% url 'new' %}">글쓰기</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% static '캡처.png' %}">아무거나</a>
                     </li>
                   </ul>
 
-                  <form class="form-inline my-2 my-lg-0" action="#">
+                  <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="q">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                   </form>
 
                 </div>
               </nav>
+              
+    <div class="attop">
+      <div class="cover">
+          <div class="head">
+              <div class="headphones">
+                  <div class="headp left"><i></i></div>
+                  <div class="headp right"><i></i></div>
+              </div>
+              <div class="petals">
+                  <div class="petals inside"></div>
+              </div>
+              <div class="face"><i></i></div>
+              <div class="point"></div>
+          </div>
+          <div class="line">
+              <div class="tail first">
+                  <!--.tail-->
+                  <div class="tail">
+                      <div class="tail">
+                          <div class="tail">
+                              <div class="tail">
+                                  <div class="tail">
+                                      <div class="tail">
+                                          <div class="tail">
+                                              <div class="tail">
+                                                  <div class="tail">
+                                                      <div class="tail">
+                                                          <div class="tail">
+                                                              <div class="tail">
+                                                                  <div class="tail">
+                                                                      <div class="tail">
+                                                                          <div class="tail">
+                                                                              <div class="tail">
+                                                                                  <div class="tail">
+                                                                                      <div class="tail">
+                                                                                          <div class="tail">
+                                                                                              <div class="tail last">
+                                                                                              </div>
+                                                                                          </div>
+                                                                                      </div>
+                                                                                  </div>
+                                                                              </div>
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="petal">
+              <div class="petal1"></div>
+              <div class="petal2"></div>
+          </div>
+          <div class="pot">
+              <div class="pot-top"><i></i><i></i></div>
+              <div class="pot-line"></div>
+          </div>
+          <div class="shadow"></div>
+      </div>
+  </div>
 
-        <div class="wrap">
+  <div class="atright">
+      <div class="cover">
+          <div class="head">
+              <div class="headphones">
+                  <div class="headp left"><i></i></div>
+                  <div class="headp right"><i></i></div>
+              </div>
+              <div class="petals">
+                  <div class="petals inside"></div>
+              </div>
+              <div class="face"><i></i></div>
+              <div class="point"></div>
+          </div>
+          <div class="line">
+              <div class="tail first">
+                  <!--.tail-->
+                  <div class="tail">
+                      <div class="tail">
+                          <div class="tail">
+                              <div class="tail">
+                                  <div class="tail">
+                                      <div class="tail">
+                                          <div class="tail">
+                                              <div class="tail">
+                                                  <div class="tail">
+                                                      <div class="tail">
+                                                          <div class="tail">
+                                                              <div class="tail">
+                                                                  <div class="tail">
+                                                                      <div class="tail">
+                                                                          <div class="tail">
+                                                                              <div class="tail">
+                                                                                  <div class="tail">
+                                                                                      <div class="tail">
+                                                                                          <div class="tail">
+                                                                                              <div class="tail last">
+                                                                                              </div>
+                                                                                          </div>
+                                                                                      </div>
+                                                                                  </div>
+                                                                              </div>
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="petal">
+              <div class="petal1"></div>
+              <div class="petal2"></div>
+          </div>
+          <div class="pot">
+              <div class="pot-top"><i></i><i></i></div>
+              <div class="pot-line"></div>
+          </div>
+          <div class="shadow"></div>
+      </div>
+  </div>
+
+              
+                      <div class="wrap">
                 <div class="nav">
                    <a class="logo" href="#"><img src="https://raw.githubusercontent.com/inspirebin/simple_blog_/master/site/images/logo.png" alt="Minimal Blog"/></a>
                   </div>
@@ -700,12 +1532,17 @@ body {
                               <h1>{{post.title}}</h1>{{post.date}}
                               written by {{user.first_name}}
                           <p>{{post.body}}</p>
-                          <a href="#" class="readmore">Read More</a>
+
+                          <a href="{% url 'delete' post.id %}" class="delete">Delete</a>
+
+                          <a href="{% url 'edit' post.id %}" class="update">update</a>
+
+                          <a href="{% url 'detail' post.id %}" class="readmore">Read More</a>
                           </div>
                       </div>
                     </div>
                     {%endfor%}
-
+                    <img src="{% static '캡처.PNG' %}">
                       
                   </div>
                   <div class="footer">
